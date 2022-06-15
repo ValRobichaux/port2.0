@@ -1,3 +1,35 @@
 .intro{
-    background: green;
+    background: white;
+    display: flex;
+
+    .left{
+        flex: 0.5;
+        overflow: hidden;
+
+        .imageContainer{
+            width: 700px;
+            height: 700px;
+            background-color: rgb(79, 126, 226);
+            border-radius: 60%;
+            display: flex;
+            align-items: flex-end;
+            align-content: center;
+            float: right;
+        
+            img{
+                height: 120%;    
+                width: 110%;
+                transform: scaleX(-1);
+                border: hidden;
+
+            }
+            
+        }
+    }
+
+    .right{
+        flex: 0.5;
+    }
 }
+
+

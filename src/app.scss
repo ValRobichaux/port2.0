@@ -11,6 +11,7 @@
         scroll-snap-type: y mandatory;
         overflow-x: hidden;
         scrollbar-width: none;
+        
         &::-webkit-scrollbar{
             display: none;
         }

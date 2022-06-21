@@ -30,6 +30,11 @@
         flex: 0.5;
         position: relative;
 
+        .typer {
+            color:rgb(79, 126, 226);
+            display:inline;
+        }
+
         .wrapper {
             width: 800px;
             height: calc(100vh - 70px);

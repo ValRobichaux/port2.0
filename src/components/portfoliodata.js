@@ -25,22 +25,22 @@ export const schoolPortfolio = [
     {
         id: 1,
         title:"Environment Variables",
-        img: "assets/Buddy_alloc.jpg"
+        img: "assets/env variable.jpg"
     },
     {
         id: 2,
         title:"Firewall Experimentation",
-        img: "assets/clientservermodel.jpg"
+        img: "assets/firewall.jpg"
     },
     {
         id: 3,
         title:"Packet sniff/spoof",
-        img: "assets/linux shell.jpg"
+        img: "assets/packet sniffing and spoofing.png"
     },
     {
         id: 4,
         title:"SQL injection attack",
-        img: "assets/TCP and IP.jpg"
+        img: "assets/sql injection.jpg"
     }
 ]
 
@@ -48,22 +48,22 @@ export const personalPortfolio = [
     {
         id: 1,
         title:"This very website!",
-        img: "assets/Buddy_alloc.jpg"
+        img: "assets/portpic.jpg"
     },
     {
         id: 2,
         title:"My Dev Blog",
-        img: "assets/clientservermodel.jpg"
+        img: "assets/dev blog.jpg"
     },
     {
         id: 3,
         title:"LeetCode Solutions",
-        img: "assets/linux shell.jpg"
+        img: "assets/leetcode.jpg"
     },
     {
         id: 4,
         title:"SpaghettiGame",
-        img: "assets/TCP and IP.jpg"
+        img: "assets/unity.png"
     }
 ]
 
@@ -71,6 +71,6 @@ export const otherPortfolio = [
     {
         id: 1,
         title:"Coming soon!",
-        img: "assets/Buddy_alloc.jpg"
+        img: "assets/coming soon.png"
     }
 ]

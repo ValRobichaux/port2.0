@@ -4,6 +4,7 @@ import './Portfolio.scss'
 
 export default function Portfolio() {
     const [selected,setSelected] = useState("featured")
+    
   const list = [
     {id: "featured",title: "Featured"},
     {id: "school work",title: "School Work"},
@@ -16,7 +17,7 @@ export default function Portfolio() {
       <h1>Portfolio.</h1>
       <ul>
         {list.map((item) => (
-          <PortfolioList 
+          <PortfolioList
             title={item.title} 
             active={selected === item.id}
             setSelected={setSelected}
@@ -39,15 +40,7 @@ export default function Portfolio() {
         </div>
         <div className='item'>
           <img src="assets/TCP and IP.jpg" alt=""></img>
-          <h3>TCP and IP protocol communication</h3>
-        </div>
-        <div className='item'>
-          <img src="assets/obamium.png" alt=""></img>
-          <h3>Random App</h3>
-        </div>
-        <div className='item'>
-          <img src="assets/obamium.png" alt=""></img>
-          <h3>Random App</h3>
+          <h3>TCP and IP communication</h3>
         </div>
       </div>
     </div>

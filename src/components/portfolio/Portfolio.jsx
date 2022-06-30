@@ -1,9 +1,17 @@
 import { useEffect, useState } from "react";
 import PortfolioList from '../portfolioList/PortfolioList';
 import './Portfolio.scss'
+import {
+  featuredPortfolio,
+  schoolPortfolio,
+  personalPortfolio,
+  otherPortfolio} from "../portfoliodata";
+
 
 export default function Portfolio() {
-    const [selected,setSelected] = useState("featured")
+    const [selected,setSelected] = useState("featured");
+    const [data, setData] = useState([]);
+
     
   const list = [
     {id: "featured",title: "Featured"},
@@ -11,6 +19,27 @@ export default function Portfolio() {
     {id: "personal work",title: "Personal Work"},
     {id: "other",title: "Other"},
   ];
+
+  useEffect(()=>{
+
+    switch(selected) {
+      case "featured":
+        setData(featuredPortfolio);
+        break;
+      case "school work":
+        setData(schoolPortfolio);
+        break;
+      case "personal work":
+        setData(personalPortfolio);
+        break;
+      case "other":
+        setData(otherPortfolio);
+        break;
+        default:
+          setData(featuredPortfolio);
+    }
+
+  },[selected])
   
   return (
     <div className='portfolio' id='portfolio'>
@@ -26,22 +55,14 @@ export default function Portfolio() {
         ))}
       </ul>
       <div className='container'>
-        <div className='item'>
-          <img src="assets/Buddy_alloc.jpg" alt=""></img>
-          <h3>Buddy Allocator</h3>
+        {data.map(d=> (
+          <div className='item'>
+          <img 
+            src={d.img} 
+            alt=""/>
+          <h3>{d.title}</h3>
         </div>
-        <div className='item'>
-          <img src="assets/clientservermodel.jpg" alt=""></img>
-          <h3>Client Server Access</h3>
-        </div>
-        <div className='item'>
-          <img src="assets/linux shell.jpg" alt=""></img>
-          <h3>Custom Linux shell</h3>
-        </div>
-        <div className='item'>
-          <img src="assets/TCP and IP.jpg" alt=""></img>
-          <h3>TCP and IP communication</h3>
-        </div>
+          ))}
       </div>
     </div>
   )

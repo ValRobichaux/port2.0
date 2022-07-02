@@ -16,6 +16,14 @@
         align-items: center;
         justify-content: space-between;
 
+        a {
+            text-decoration: none;
+            color: black;
+            font-size:large;
+            font-weight: bold;
+            transition: all 1s ease;
+        }
+
         .left {
             display:flex;
             align-items: center;
@@ -41,19 +49,12 @@
                 }
 
                 span {
-                    font-size: 16px;
+                    font-size: 17px;
                     font-weight: 400;
                     font-weight: bold;
                     display: inline;
                     margin: 10px 10px 10px 0;
                     padding: 2px 5px;
-                }
-
-                a {
-                    text-decoration: none;
-                    color: black;
-                    font-size:large;
-                    font-weight: bold;
                 }
 
             }
@@ -74,7 +75,7 @@
                     height: 3px;
                     background-color: $mainColor;
                     transform-origin: left;
-                    transition: all 2s ease;
+                    transition: all 1s ease;
                 }
             }
         }
@@ -84,6 +85,9 @@
         background-color: $mainColor;
         color:white;
 
+        a {
+            color: white;
+        }
 
         .hamburger {
             span {

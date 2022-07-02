@@ -16,7 +16,7 @@ export default function Portfolio() {
 
   const list = [
     { id: "featured", title: "Featured" },
-    { id: "school work", title: "School Work" },
+    { id: "school work", title: "Security Work" },
     { id: "personal work", title: "Personal Work" },
     { id: "other", title: "Github" },
   ];

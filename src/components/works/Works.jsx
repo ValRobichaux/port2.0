@@ -15,10 +15,16 @@ export default function works() {
                 <span>Projects</span>
               </div>
             </div>
-            <div className="right"></div>
+            <div className="right">
+              <img src="assets/placeholder.png" alt=""></img>
+            </div>
+            
           </div>
         </div>
       </div>
+      <img src="assets/downarrow.png" className="arrow left" alt=""></img>
+      <img src="assets/downarrow.png" className="arrow right" alt=""></img>
+
     </div>
   )
 }

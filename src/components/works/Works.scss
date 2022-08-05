@@ -10,13 +10,13 @@
         position: absolute;
 
         &.left{
-            left: 200px;
+            left: 250px;
             transform: rotateY(180deg);
             transform: rotate(90deg);
         }
 
         &.right{
-            right: 200px;
+            right: 250px;
             transform: rotateY(-180deg);
             transform:rotate(-90deg);
 

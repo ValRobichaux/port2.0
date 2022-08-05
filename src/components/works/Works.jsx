@@ -19,15 +19,15 @@ export default function Works() {
               <div className="left">
                 <div className="leftContainer">
                  <div className="imgContainer">
-                  <img src={d.img} alt="" />
+                  <img src={d.icon} alt="" />
                   </div>
-                <h2>{d.title}</h2>
+                <h2>{d.title}
                 <p>{d.description}</p>
-                <span>Projects</span>
+                </h2>
               </div>
             </div>
             <div className="right">
-              <img src="assets/placeholder.png" alt=""/>
+              <img src={d.img} alt=""/>
             </div>
           </div>
         </div>))}

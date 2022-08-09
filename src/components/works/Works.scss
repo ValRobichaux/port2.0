@@ -17,16 +17,13 @@
             transform: rotate(90deg);
 
             &:hover {
-                transform: rotateY(180deg);
-                transform: rotate(90deg);
                 animation: bounceLeft 2s infinite;
             }
         }
 
         &.right{
             right: 250px;
-            transform: rotateY(-180deg);
-            transform:rotate(-90deg);
+
              
             &:hover {
                 animation: bounceRight 2s infinite;

@@ -27,7 +27,8 @@ export default function Works() {
               </div>
             </div>
             <div className="right">
-              <img src={d.img} alt=""/>
+              <a href={d.weblink} target="_blank" rel="noopener noreferrer">
+                <img src={d.img} alt=""/> </a>
             </div>
           </div>
         </div>))}

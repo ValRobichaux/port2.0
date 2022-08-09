@@ -9,9 +9,10 @@ export const workData = [
     },
     {
         id: 2,
-        icon: "assets/placeholder.png",
+        icon: "assets/MLicon.png",
         title: "Machine Learning",
-        img: "assets/placeholder.png",
+        description:"I personally think that Machine learning is going to change the world some day.  Machine learning combines statistics, data mining, and computer learning and meshes them into a unique way to observe and manipulate data.  Data is only getting bigger as the world grows and being able to come up with intelligent decisions based on data will help improve quality of life for everyone. ",
+        img: "assets/MLmain.png",
         weblink: "https://google.com"
     },
     {

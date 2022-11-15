@@ -1,14 +1,22 @@
 @import "../../global.scss";
 
 .contact {
-  background-color: lightblue;
+  background-color: white;
   display: flex;
 
   .left {
-    flex: 1;
-    overflow: hidden;
+    flex: 1 1;
+    overflow: auto;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    
     img {
       height: 100%;
+      margin-right: -500px;
     }
   }
   .right {
@@ -47,6 +55,7 @@
         border: none;
         border-radius: 10px;
         font-weight: 300;
+        font-size: larger;
 
         &:hover{
             font-weight: 600;
@@ -57,7 +66,7 @@
         }
       }
       span {
-        color: green;
+        color: $mainColor;
       }
     }
   }

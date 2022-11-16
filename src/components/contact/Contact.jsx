@@ -2,6 +2,7 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import "./Contact.scss";
 import { useEffect } from "react";
+import InputField from "../inputField/InputField";
 
 export default function Contact() {
   const [message, setMessage] = useState(false);
@@ -54,6 +55,7 @@ export default function Contact() {
       <div className="right">
         <h2>Contact me!</h2>
         <form onSubmit={handleSubmit}>
+          <InputField/>
           <input type="text" placeholder="Email" />
           <textarea placeholder="Message"></textarea>
           <button type="submit">Send</button>

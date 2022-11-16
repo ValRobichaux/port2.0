@@ -1,0 +1,23 @@
+
+.inputfield {
+  display: block;
+
+  .label {
+    display: inherit;
+    font-size: large;
+    font-family: sans-serif;
+    color:rgb(129, 129, 156);
+    font-size:large;
+  }
+
+  .input {
+    outline: none;
+    width: 400px;
+    border: 2px;
+    background: rgba(129, 129, 156, 0.171);
+    margin-bottom: 2px;
+    height: 35px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}

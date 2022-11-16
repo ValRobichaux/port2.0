@@ -2,12 +2,12 @@ import "./InputField.scss";
 
 export default function InputField({name,label,type,handleChange,value}) {
   return (
-    <div className="mb-5">
-      <label className="text-gray-500 text-sm" htmlFor={name}>
+    <div className="inputfield">
+      <label className="label" htmlFor={name}>
         {label}
       </label>
       <input
-        className="border-b-2 outline-none text-gray-700 w-full bg-gray-100 h-10 px-2"
+        className="input"
         type={type}
         onChange={handleChange}
         value={value}

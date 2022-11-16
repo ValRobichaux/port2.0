@@ -6,7 +6,7 @@ import InputField from "../inputField/InputField";
 
 export default function Contact() {
   const [message, setMessage] = useState(false);
-  const [status,setStatus] = useState('');
+  const [status, setStatus] = useState("");
   const [emailargs, setEmailargs] = useState({
     fullName: "",
     email: "",
@@ -24,25 +24,35 @@ export default function Contact() {
         emailargs,
         "HTSHxPmiutMp2n0KB"
       )
-      .then((response) => {
-        console.log("Message submitted successfully", response);
-        setEmailargs({
-          fullName: "",
-          email: "",
-          role: "",
-          message: "",
-        });
-        setStatus('success');
-      }, error => {
-        console.log('Message not sent',error);
-      });
+      .then(
+        (response) => {
+          console.log("Message submitted successfully", response);
+          setEmailargs({
+            fullName: "",
+            email: "",
+            role: "",
+            message: "",
+          });
+          setStatus("success");
+        },
+        (error) => {
+          console.log("Message not sent", error);
+        }
+      );
+  };
+
+  const handleChange = (e) => {
+    setEmailargs((values) => ({
+      ...values,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   useEffect(() => {
-    if(status === 'success') {
+    if (status === "success") {
       setTimeout(() => {
-        setStatus('');
-      },3000);
+        setStatus("");
+      }, 3000);
     }
   }, [status]);
 
@@ -55,9 +65,22 @@ export default function Contact() {
       <div className="right">
         <h2>Contact me!</h2>
         <form onSubmit={handleSubmit}>
-          <InputField/>
-          <input type="text" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
+          <InputField
+            value={emailargs.fullName}
+            handleChange={handleChange}
+            label="Full Name"
+            name="fullName"
+            type="text"
+            placeholder="John Doe"
+          />
+          <InputField
+            value={emailargs.fullName}
+            handleChange={handleChange}
+            label="E-mail"
+            name="email"
+            type="email"
+            placeholder="JohnDoe@example.com"
+          />
           <button type="submit">Send</button>
           {message && <span>Thanks, I'll get back to you ASAP! :)</span>}
         </form>

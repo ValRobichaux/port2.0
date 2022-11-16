@@ -48,6 +48,7 @@ export default function Portfolio() {
       <ul>
         {list.map((item) => (
           <PortfolioList
+            key={item.key}
             title={item.title}
             active={selected === item.id}
             setSelected={setSelected}
@@ -57,7 +58,7 @@ export default function Portfolio() {
       </ul>
       <div className='container'>
         {data.map(d => (
-          <a href={d.weblink} target="_blank" rel="noopener noreferrer">
+          <a href={d.weblink} target="_blank" rel="noopener noreferrer" key={d.key}>
             <div className='item'>
               <img
                 src={d.img}

@@ -4,6 +4,7 @@ import "./Contact.scss";
 import { useEffect } from "react";
 import InputField from "../inputField/InputField";
 import TextField from "../textField/TextField";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 export default function Contact() {
   const [message, setMessage] = useState(false);
@@ -67,7 +68,7 @@ export default function Contact() {
       <div className="right">
         <div className="formContainer">
           <form onSubmit={handleSubmit}>
-          <h2 className="formTitle">Contact me!</h2>
+            <h2 className="formTitle">Contact me!</h2>
             <InputField
               value={emailargs.fullName}
               handleChange={handleChange}
@@ -90,7 +91,10 @@ export default function Contact() {
               name="message"
               label="Your message here"
             />
-            <button type="submit" className="submitButton">Send</button>
+            <button type="submit" className="submitButton">
+              Send
+              <ArrowForwardIosIcon className="arrowIcon"/>
+            </button>
             {message && <span>Thanks, I'll get back to you ASAP! :)</span>}
           </form>
         </div>

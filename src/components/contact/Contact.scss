@@ -46,14 +46,25 @@
         }
 
         .submitButton {
-          width: 200px;
-          height: 80px;
+          width: 6em;
+          height: 60px;
           color: whitesmoke;
           background-color: $mainColor;
           border: none;
           border-radius: 10px;
           font-weight: 300;
-          font-size: larger;
+          font-size: 18px;
+          margin-right: 35rem;
+          display:flex; 
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          justify-content: space-around;
+
+          .arrowIcon{
+            display:inline;
+            font-weight: 900;
+          }
 
           &:hover {
             font-weight: 600;

@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import "./Contact.scss";
 import { useEffect } from "react";
 import InputField from "../inputField/InputField";
+import TextField from "../textField/TextField"
 
 export default function Contact() {
   const [message, setMessage] = useState(false);
@@ -13,6 +14,7 @@ export default function Contact() {
     role: "",
     message: "",
   });
+  console.log(emailargs);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -74,12 +76,18 @@ export default function Contact() {
             placeholder="John Doe"
           />
           <InputField
-            value={emailargs.fullName}
+            value={emailargs.email}
             handleChange={handleChange}
-            label="E-mail"
+            label="Email"
             name="email"
-            type="email"
-            placeholder="JohnDoe@example.com"
+            type="text"
+            placeholder="John Doe"
+          />
+          <TextField
+          value={emailargs.message}
+          handleChange={handleChange}
+          name="message"
+          label="Your message here"
           />
           <button type="submit">Send</button>
           {message && <span>Thanks, I'll get back to you ASAP! :)</span>}

@@ -12,11 +12,12 @@
   
     .textarea {
       outline: none;
-      width: 400px;
+      width: 600px;
       border: 2px;
       background: rgba(129, 129, 156, 0.171);
       margin-bottom: 2px;
       height: 14em;
+      border-bottom: 2px solid grey;
       padding-left: 2px;
       padding-right: 2px;
     }

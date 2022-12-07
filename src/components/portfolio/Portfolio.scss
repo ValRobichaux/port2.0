@@ -24,20 +24,14 @@
       padding: 13px;
       border-radius: 5px;
       cursor: pointer;
-      
+      box-shadow: inset 0 0 0 0 $mainColor;
+      -webkit-transition: all ease 0.8s;
+      -moz-transition: all ease 0.8s;
+      transition: all ease 0.8s;
 
       &.active {
         background-color: $mainColor;
-        animation-name: bgslide;
-        animation-duration: 1s;
-      }
-    }
-    @keyframes bgslide {
-      from {
-        background-color: white;
-      }
-      to {
-        background-color: $mainColor;
+        box-shadow: inset 300px 0 0 0 $mainColor;
       }
     }
   }

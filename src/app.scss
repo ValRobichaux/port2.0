@@ -1,26 +1,39 @@
 .app {
-    height: 100px;
-    
-    .sections {
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color:lightcoral;
-        position: relative;
-        top: 70px;
-        scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
-        overflow-x: hidden;
-        scrollbar-width: none;
-        
-        &::-webkit-scrollbar{
-            display: none;
-        }
+  height: 100vh;
+  min-height: 100%;
 
-        > *{
-            width: 100vw;
-            height: calc(100vh - 70px);
-            scroll-snap-align: start;
-            
+  .sections {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    scrollbar-width: none;
+
+    .responsive-container {
+      width: 100%;
+      .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 2%;
+        .col {
+          width: 48%;
         }
+      }
     }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    > * {
+      width: 100vw;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      scroll-snap-align: start;
+    }
+  }
 }

@@ -5,7 +5,6 @@ import {
   featuredPortfolio,
   schoolPortfolio,
   personalPortfolio,
-  otherPortfolio
 } from "../portfoliodata";
 
 
@@ -18,7 +17,6 @@ export default function Portfolio() {
     { id: "featured", title: "Featured" },
     { id: "school work", title: "Security Work" },
     { id: "personal work", title: "Personal Work" },
-    { id: "other", title: "Github" },
   ];
 
   useEffect(() => {
@@ -32,9 +30,6 @@ export default function Portfolio() {
         break;
       case "personal work":
         setData(personalPortfolio);
-        break;
-      case "other":
-        setData(otherPortfolio);
         break;
       default:
         setData(featuredPortfolio);

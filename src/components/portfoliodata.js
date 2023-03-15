@@ -95,12 +95,3 @@ export const personalPortfolio = [
   },
 ];
 
-export const otherPortfolio = [
-  {
-    id: 1,
-    title: "Github",
-    img: "assets/github.jpg",
-    weblink: "https://github.com/ValRobichaux",
-    key: "github",
-  },
-];

@@ -174,14 +174,19 @@
               height: 130%;
               .leftContainer {
                 .imgContainer {
+                  width: 20px;
+                  height: 20px;
                 }
                 img {
+                  width: 33px;
+                  height: 50px;
                 }
                 h2 {
                   font-size:24px;
+                  margin-top: 0.5rem;
                 }
                 p {
-                  font-size: 15px;
+                  font-size: 12px;
                 }
               }
             }

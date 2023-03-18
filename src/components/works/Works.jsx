@@ -14,16 +14,16 @@ export default function Works() {
 
   return (
     <div className="works" id="works">
-      <div className="responsive-container">
-        <div className="row">
+      
           <div
             className="slider"
             style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
           >
             {workData.map((d) => (
-              <div className="container" key={d.key}>
+              <div className="responsive-container" key={d.key}>
+                <div className="row">
                 <div className="item">
-                  <div className="left">
+                  <div className="left col">
                     <div className="leftContainer">
                       <div className="imgContainer">
                         <img src={d.icon} alt="" />
@@ -34,7 +34,7 @@ export default function Works() {
                       </h2>
                     </div>
                   </div>
-                  <div className="right">
+                  <div className="right col">
                     <a
                       href={d.weblink}
                       target="_blank"
@@ -44,6 +44,7 @@ export default function Works() {
                     </a>
                   </div>
                 </div>
+              </div>
               </div>
             ))}
           </div>
@@ -61,7 +62,5 @@ export default function Works() {
             onClick={() => handleClick("right")}
           ></img>
         </div>
-      </div>
-    </div>
   );
 }

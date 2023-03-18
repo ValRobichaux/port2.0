@@ -84,6 +84,7 @@
     ul {
       flex-wrap: wrap;
       justify-content: center;
+      padding-bottom: 1rem;
       li {
         font-size: 30px;
         padding: 17px;
@@ -99,7 +100,7 @@
       width: 100%;
       justify-content: space-evenly;
       .item {
-        width: 15rem;
+        width: 21rem;
         height: 13rem;
         img {
           border-radius: 10%;

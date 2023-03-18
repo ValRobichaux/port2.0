@@ -6,46 +6,46 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 30% 0px 35.5% 0px;
-  .responsive-container {
-    .arrow {
-      height: 75px;
-      position: absolute;
-      margin: 7rem;
+  padding: 10% 0px 20% 0px;
+  .arrow {
+    height: 75px;
+    position: absolute;
+    margin: 7rem;
 
-      &.left {
-        left: 250px;
-        transform: rotateY(180deg);
-        transform: rotate(90deg);
+    &.left {
+      left: 250px;
+      top: 250rem;
+      transform: rotateY(180deg);
+      transform: rotate(90deg);
 
-        &:hover {
-          animation: bounceLeft 2s infinite;
-        }
-      }
-
-      &.right {
-        right: 250px;
-        transform: rotateY(-180deg);
-        transform: rotate(-90deg);
-
-        &:hover {
-          animation: bounceRight 2s infinite;
-        }
+      &:hover {
+        animation: bounceLeft 2s infinite;
       }
     }
 
-    .slider {
-      height: 350px;
-      display: flex;
-      position: absolute;
-      left: 0;
-      transition: all 1s ease-out;
-      .container {
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    &.right {
+      right: 250px;
+      top: 250rem;
+      transform: rotateY(-180deg);
+      transform: rotate(-90deg);
 
+      &:hover {
+        animation: bounceRight 2s infinite;
+      }
+    }
+  }
+
+  .slider {
+    display: flex;
+    transition: all 1s ease-out;
+    gap: 28%;
+    margin-left: 200rem;
+    .responsive-container {
+      width: 100vw;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      .row {
         .item {
           width: 1400px;
           height: 250%;
@@ -114,74 +114,69 @@
       }
     }
   }
+}
 
-  @keyframes bounceLeft {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateX(0) rotate(90deg) rotateY(180deg);
-    }
-    40% {
-      transform: translateX(30px) rotate(90deg) rotateY(180deg);
-    }
-    60% {
-      transform: translateX(15px) rotate(90deg) rotateY(180deg);
-    }
+@keyframes bounceLeft {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0) rotate(90deg) rotateY(180deg);
+  }
+  40% {
+    transform: translateX(30px) rotate(90deg) rotateY(180deg);
+  }
+  60% {
+    transform: translateX(15px) rotate(90deg) rotateY(180deg);
+  }
+}
+
+@keyframes bounceRight {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0) rotate(-90deg) rotateY(-180deg);
+  }
+  40% {
+    transform: translateX(-30px) rotate(-90deg) rotateY(-180deg);
+  }
+  60% {
+    transform: translateX(-15px) rotate(-90deg) rotateY(-180deg);
+  }
+}
+@include mobile {
+  background-color: $mainColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+
+  .arrow {
+    display: none;
   }
 
-  @keyframes bounceRight {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateX(0) rotate(-90deg) rotateY(-180deg);
-    }
-    40% {
-      transform: translateX(-30px) rotate(-90deg) rotateY(-180deg);
-    }
-    60% {
-      transform: translateX(-15px) rotate(-90deg) rotateY(-180deg);
-    }
-  }
-  @include mobile {
-    background-color: $mainColor;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    flex-direction: column;;
-
-    .arrow {
-      display:none;
-    }
-
-    .slider {
-      .container {
-
-        .item {
-          
-          .left {
-
-            .leftContainer {
-
-              .imgContainer {
-              }
-              img {
-              }
-              h2 {
-              }
-              p {
-              }
+  .slider {
+    .container {
+      .item {
+        .left {
+          .leftContainer {
+            .imgContainer {
             }
-          }
-
-          .right {
-
             img {
             }
+            h2 {
+            }
+            p {
+            }
+          }
+        }
+
+        .right {
+          img {
           }
         }
       }

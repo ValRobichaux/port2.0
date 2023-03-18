@@ -5,108 +5,110 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  padding: 30% 0px 30% 0px;
-  .arrow {
-    height: 75px;
-    position: absolute;
+  width: 100%;
+  padding: 30% 0px 35.5% 0px;
+  .responsive-container {
+    .arrow {
+      height: 75px;
+      position: absolute;
+      margin: 7rem;
 
-    &.left {
-      left: 250px;
-      transform: rotateY(180deg);
-      transform: rotate(90deg);
+      &.left {
+        left: 250px;
+        transform: rotateY(180deg);
+        transform: rotate(90deg);
 
-      &:hover {
-        animation: bounceLeft 2s infinite;
+        &:hover {
+          animation: bounceLeft 2s infinite;
+        }
+      }
+
+      &.right {
+        right: 250px;
+        transform: rotateY(-180deg);
+        transform: rotate(-90deg);
+
+        &:hover {
+          animation: bounceRight 2s infinite;
+        }
       }
     }
 
-    &.right {
-      right: 250px;
-      transform: rotateY(-180deg);
-      transform: rotate(-90deg);
-
-      &:hover {
-        animation: bounceRight 2s infinite;
-      }
-    }
-  }
-
-  .slider {
-    height: 350px;
-    display: flex;
-    position: absolute;
-    left: 0;
-    transition: all 1s ease-out;
-    .container {
-      width: 100vw;
+    .slider {
+      height: 350px;
       display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .item {
-        width: 1400px;
-        height: 250%;
-        background-color: white;
-        border-radius: 10px;
+      position: absolute;
+      left: 0;
+      transition: all 1s ease-out;
+      .container {
+        width: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
 
-        .left {
-          flex: 4;
-          height: 80%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          .leftContainer {
-            width: 90%;
-            height: 70%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            .imgContainer {
-              width: 40px;
-              height: 40px;
-              border-radius: 50%;
-              background-color: $mainColor;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            }
-            img {
-              width: 66px;
-              height: 100px;
-              object-fit: contain;
-            }
-            h2 {
-              height: 420px;
-              font-size: 50px;
-              font-weight: 600;
-            }
-            p {
-              font-size: 20px;
-              color: rgb(122, 118, 118);
-            }
-          }
-        }
-
-        .right {
-          flex: 8;
-          height: 100%;
+        .item {
+          width: 1400px;
+          height: 250%;
+          background-color: white;
+          border-radius: 10px;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
 
-          img {
-            width: 400px;
-            transform: rotate(10deg);
-            height: auto;
-            width: auto;
+          .left {
+            flex: 4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .leftContainer {
+              width: 90%;
+              height: 70%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              .imgContainer {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: $mainColor;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              img {
+                width: 66px;
+                height: 100px;
+                object-fit: contain;
+              }
+              h2 {
+                height: 420px;
+                font-size: 50px;
+                font-weight: 600;
+              }
+              p {
+                font-size: 30px;
+                color: rgb(122, 118, 118);
+              }
+            }
+          }
+
+          .right {
+            flex: 5;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            img {
+              width: 400px;
+              transform: rotate(10deg);
+              height: auto;
+              width: auto;
+            }
           }
         }
       }

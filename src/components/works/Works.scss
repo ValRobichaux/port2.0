@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 10% 0px 20% 0px;
+  padding: 10% 0px 10% 0px;
   .arrow {
     height: 75px;
     position: absolute;
@@ -48,7 +48,7 @@
       .row {
         .item {
           width: 1400px;
-          height: 250%;
+          height: 66vh;
           background-color: white;
           border-radius: 10px;
           display: flex;
@@ -148,35 +148,49 @@
   }
 }
 @include mobile {
-  background-color: $mainColor;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  flex-direction: column;
+  .works {
+    background-color: $mainColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
 
-  .arrow {
-    display: none;
-  }
+    .arrow {
+      display: none;
+    }
 
-  .slider {
-    .container {
-      .item {
-        .left {
-          .leftContainer {
-            .imgContainer {
+    .slider {
+      gap: 0%;
+      margin-left: 0;
+      flex-direction: column;
+      .responsive-container {
+        .row {
+          .item {
+            width: 100%;
+            margin-bottom: 2rem;
+            height: 27vh;
+            .left {
+              height: 130%;
+              .leftContainer {
+                .imgContainer {
+                }
+                img {
+                }
+                h2 {
+                  font-size:24px;
+                }
+                p {
+                  font-size: 15px;
+                }
+              }
             }
-            img {
-            }
-            h2 {
-            }
-            p {
-            }
-          }
-        }
 
-        .right {
-          img {
+            .right {
+              img {
+                width: 100%;
+              }
+            }
           }
         }
       }

@@ -1,6 +1,6 @@
 @import "../../global.scss";
 
-.intro {
+#intro {
   background: white;
   display: flex;
   width: 100%;
@@ -55,7 +55,7 @@
           h3 {
             font-size: 30px;
           }
-          .typer{
+          .typer {
             display: contents;
           }
         }
@@ -90,46 +90,47 @@
   }
 
   @include mobile {
-    flex-direction: column;
-    align-items: center;
-    padding: 0px 0px 100% 0px;
-    width: 100%;
-    .responsive-container {
-      .row {
-        flex-direction: column;
-        align-items: center;
-        .left {
-          display: flex;
-          width: 100%;
-          justify-content: space-around;
-          .imageContainer {
-            align-items: flex-start;
-            height: fit-content;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px 0px 100% 0px;
+      width: 100%;
+      .responsive-container {
+        .row {
+          flex-direction: column;
+          align-items: center;
+          .left {
+            display: flex;
             width: 100vw;
-            overflow: hidden;
-            border-radius: 10%;
-            img {
-              height: 50%;
+            justify-content: space-around;
+            .imageContainer {
+              align-items: flex-start;
+              height: fit-content;
               width: 100vw;
+              overflow: hidden;
+              border-radius: 10%;
+              img {
+                height: 50%;
+                width: 100vw;
+              }
+            }
+          }
+          .right {
+            display: flex;
+            text-align: center;
+            width: 100vw;
+            .typer {
+              padding-right: 2rem;
+            }
+            .wrapper {
+              padding-left: 0;
+              align-items: center;
+              height: 50%;
+            }
+            a {
+              display: none;
             }
           }
         }
-        .right {
-          display: flex;
-          text-align: center;
-          .typer {
-            padding-right: 2rem;
-          }
-          .wrapper {
-            padding-left: 0;
-            align-items: center;
-            height: 50%;
-          }
-          a{
-            display:none;
-          }
-        }
       }
-    }
   }
 }

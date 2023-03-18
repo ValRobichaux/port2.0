@@ -1,6 +1,6 @@
+import "./Contact.scss";
 import { useState } from "react";
 import emailjs from "emailjs-com";
-import "./Contact.scss";
 import { useEffect } from "react";
 import InputField from "../inputField/InputField";
 import TextField from "../textField/TextField";
@@ -62,41 +62,45 @@ export default function Contact() {
   return (
     <div className="contact" id="contact">
       {status}
-      <div className="left">
-        <img src="assets/emailMe.png" alt=""></img>
-      </div>
-      <div className="right">
-        <div className="formContainer">
-          <form onSubmit={handleSubmit}>
-            <h2 className="formTitle">Contact me!</h2>
-            <InputField
-              value={emailargs.fullName}
-              handleChange={handleChange}
-              label="Full Name"
-              name="fullName"
-              type="text"
-              placeholder="John Doe"
-            />
-            <InputField
-              value={emailargs.email}
-              handleChange={handleChange}
-              label="Email"
-              name="email"
-              type="text"
-              placeholder="John Doe"
-            />
-            <TextField
-              value={emailargs.message}
-              handleChange={handleChange}
-              name="message"
-              label="Your message here"
-            />
-            <button type="submit" className="submitButton">
-              Send
-              <ArrowForwardIosIcon className="arrowIcon"/>
-            </button>
-            {message && <span>Thanks, I'll get back to you ASAP! :)</span>}
-          </form>
+      <div className="responsive-container">
+        <div className="row">
+          <div className="left col">
+            <img src="assets/emailMe.png" alt=""></img>
+          </div>
+          <div className="right col">
+            <div className="formContainer">
+              <form onSubmit={handleSubmit}>
+                <h2 className="formTitle">Contact me!</h2>
+                <InputField
+                  value={emailargs.fullName}
+                  handleChange={handleChange}
+                  label="Full Name"
+                  name="fullName"
+                  type="text"
+                  placeholder="John Doe"
+                />
+                <InputField
+                  value={emailargs.email}
+                  handleChange={handleChange}
+                  label="Email"
+                  name="email"
+                  type="text"
+                  placeholder="John Doe"
+                />
+                <TextField
+                  value={emailargs.message}
+                  handleChange={handleChange}
+                  name="message"
+                  label="Your message here"
+                />
+                <button type="submit" className="submitButton">
+                  Send
+                  <ArrowForwardIosIcon className="arrowIcon" />
+                </button>
+                {message && <span>Thanks, I'll get back to you ASAP! :)</span>}
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>

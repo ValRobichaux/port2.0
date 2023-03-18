@@ -8,7 +8,7 @@
   padding: 100px 0px 10% 0px;
 
   h1 {
-    font-size: 60px;
+    font-size: 6rem;
   }
 
   ul {
@@ -19,8 +19,8 @@
     padding-bottom: 4rem;
 
     li {
-      font-size: 30px;
-      padding: 10px;
+      font-size: 3rem;
+      padding: 1rem;
       margin-right: 4rem;
       border-radius: 5px;
       cursor: pointer;
@@ -36,11 +36,12 @@
     }
   }
   .container {
-    width: 70%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 5%;
 
     .item {
       width: 30vw;
@@ -83,7 +84,7 @@
     ul {
       flex-wrap: wrap;
       justify-content: center;
-      li{
+      li {
         font-size: 30px;
         padding: 17px;
         border-radius: 5px;

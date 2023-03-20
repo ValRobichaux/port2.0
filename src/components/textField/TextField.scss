@@ -1,18 +1,40 @@
+@import "../../global.scss";
 
 .textfield {
-    display: block;
-  
+  display: block;
+
+  .label {
+    display: inherit;
+    font-size: large;
+    font-family: sans-serif;
+    color: rgb(129, 129, 156);
+    font-size: large;
+  }
+
+  .textarea {
+    outline: none;
+    width: 100%;
+    border: 2px;
+    background: rgba(129, 129, 156, 0.171);
+    margin-bottom: 2px;
+    height: 14em;
+    border-bottom: 2px solid grey;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  @include mobile {
+    width: 90%;
     .label {
       display: inherit;
       font-size: large;
       font-family: sans-serif;
-      color:rgb(129, 129, 156);
-      font-size:large;
+      color: rgb(129, 129, 156);
+      font-size: large;
     }
-  
+
     .textarea {
       outline: none;
-      width: 600px;
+      width: 100%;
       border: 2px;
       background: rgba(129, 129, 156, 0.171);
       margin-bottom: 2px;
@@ -22,3 +44,4 @@
       padding-right: 2px;
     }
   }
+}

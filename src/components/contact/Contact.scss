@@ -4,6 +4,7 @@
   background-color: white;
   display: flex;
   width: 100vw;
+  padding:10% 0px 10% 0px;
   .responsive-container {
     .row {
       .left {
@@ -15,7 +16,6 @@
         flex-wrap: wrap;
         align-content: stretch;
         justify-content: center;
-        height: 100vh;
 
         img {
           height: 100%;
@@ -96,17 +96,24 @@
           flex:none;
           overflow: hidden;
           width: 100%;
+          justify-content: space-between;
           img {
+            max-width: 125%;
+            margin-right:0;
+            display:none;
           }
         }
         .right {
           width: 100%;
           .formContainer {
+            padding:0;
+            width: 100%;
             form {
               .formTitle {
               }
 
               .submitButton {
+                margin-right:0;
                 .arrowIcon {
                 }
 

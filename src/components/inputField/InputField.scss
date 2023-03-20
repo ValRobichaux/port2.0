@@ -1,3 +1,4 @@
+@import "../../global.scss";
 
 .inputfield {
   display: block;
@@ -12,7 +13,7 @@
 
   .input {
     outline: none;
-    width: 600px;
+    width: 100%;
     border: 2px;
     background: rgba(129, 129, 156, 0.171);
     margin-bottom: 2px;
@@ -20,5 +21,8 @@
     height: 35px;
     padding-left: 2px;
     padding-right: 2px;
+  }
+  @include mobile{
+    width: 90%;
   }
 }

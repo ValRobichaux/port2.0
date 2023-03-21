@@ -4,7 +4,6 @@
   background-color: white;
   display: flex;
   width: 100vw;
-  padding:10% 0px 10% 0px;
   .responsive-container {
     .row {
       .left {
@@ -20,6 +19,7 @@
         img {
           height: 100%;
           margin-right: -500px;
+          max-width: 200%;
         }
       }
       .right {
@@ -40,7 +40,6 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: space-around;
             gap: 2rem;
 

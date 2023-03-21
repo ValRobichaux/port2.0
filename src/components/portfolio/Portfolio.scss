@@ -9,6 +9,7 @@
 
   h1 {
     font-size: 6rem;
+    z-index: 1;
   }
 
   ul {
@@ -31,7 +32,7 @@
 
       &.active {
         background-color: $mainColor;
-        box-shadow: inset 300px 0 0 0 $mainColor;
+        box-shadow: inset 300px 0 0 0 white;
       }
     }
   }

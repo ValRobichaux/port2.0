@@ -5,9 +5,9 @@
     padding: 6px;
     border-radius: 5px;
     cursor: pointer;
+    z-index: 1;
 
     &.active{
-        background-color: $mainColor;
         background-size: 100px;
     }
 }

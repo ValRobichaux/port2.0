@@ -54,7 +54,7 @@ export default function Portfolio() {
       <div className='container'>
         {data.map(d => (
           <a href={d.weblink} key={d.key} target="_blank" rel="noopener noreferrer">
-            <div className='item'>
+            <div className='animate pop item'>
               <img
                 src={d.img}
                 alt="" 

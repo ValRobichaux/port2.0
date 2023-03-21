@@ -88,6 +88,7 @@
     background-color: white;
     display: flex;
     width: 100vw;
+    padding: 30% 0;
     .responsive-container {
       .row {
         flex-direction: column;
@@ -105,8 +106,8 @@
         .right {
           width: 100%;
           .formContainer {
-            padding:0;
-            width: 100%;
+            padding: 10% 0 10%;
+            width: 95%;
             box-shadow: none;
             padding-left:2rem;
             form {

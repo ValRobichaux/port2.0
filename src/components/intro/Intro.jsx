@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 export default function intro() {
   return (
     <div className="intro" id="intro">
+      <div id='particles-js'></div>
       <div className="responsive-container">
         <div className="row">
           <div className="left col">

@@ -55,6 +55,7 @@
           align-items: center;
           justify-content: center;
           overflow: hidden;
+          box-shadow: 20px 20px rgba(0, 0, 0, 0.267);
 
           .left {
             flex: 4;
@@ -182,7 +183,7 @@
                   height: 50px;
                 }
                 h2 {
-                  font-size:24px;
+                  font-size: 24px;
                   margin-top: 0.5rem;
                 }
                 p {

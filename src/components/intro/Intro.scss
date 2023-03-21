@@ -8,13 +8,15 @@
   width: 100%;
   padding: 100px 0px 5% 0px;
   .responsive-container {
+    user-select: none;
     .row {
       display: flex;
       .left {
         overflow: hidden;
+        z-index: 1;
         .imageContainer {
           height: calc(100vh - 70px);
-          background-color: rgb(79, 126, 226);
+          background-color: currentColor;
           border-radius: 60%;
           display: flex;
           align-items: flex-end;
@@ -43,22 +45,25 @@
           padding-left: 4rem;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: center; 
+          z-index: 1;
 
           h1 {
-            font-size: 70px;
+            font-size: 100px;
             margin: 10px 0;
+            color: white;
           }
 
           h2 {
-            font-size: 35px;
+            font-size: 70px;
           }
 
           h3 {
-            font-size: 30px;
+            font-size: 60px;
           }
           .typer {
             display: contents;
+            color: white;
           }
         }
 

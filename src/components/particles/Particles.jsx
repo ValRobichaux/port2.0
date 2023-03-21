@@ -11,50 +11,131 @@ const ParticlesComponent = (props) => {
     // using an empty options object will load the default options, which are static particles with no background and 3px radius, opacity 100%, white color
     // all options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
     return {
-      background: {
-        color: "#000", // this sets a background color for the canvas
-      },
-      fullScreen: {
-        enable: true, // enabling this will make the canvas fill the entire screen, it's enabled by default
-        zIndex: 0, // this is the z-index value used when the fullScreen is enabled, it's 0 by default
-      },
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true, // enables the click event
-            mode: "push", // adds the particles on click
+        fpsLimit: 120,
+        particles: {
+          number: {
+            value: 50,
+            density: {
+              enable: true,
+              value_area: 800
+            }
           },
-          onHover: {
-            enable: true, // enables the hover event
-            mode: "repulse", // make the particles run away from the cursor
+          color: {
+            value: "#ffffff",
+            animation: {
+              enable: true,
+              speed: 0.1,
+              sync: true
+            }
           },
-        },
-        modes: {
-          push: {
-            quantity: 10, // number of particles to add on click
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000"
+            },
+            polygon: {
+              nb_sides: 5
+            },
+            image: {
+              src: "https://cdn.matteobruni.it/images/particles/github.svg",
+              width: 100,
+              height: 100
+            }
           },
-          repulse: {
-            distance: 100, // distance of the particles from the cursor
+          opacity: {
+            value: 0.2,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 0.1,
+              opacity_min: 0.1,
+              sync: false
+            }
           },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 5,
+              size_min: 0.1,
+              sync: false
+            }
+          },
+          line_linked: {
+            enable: true,
+            distance: 100,
+            color: "random",
+            opacity: 0.4,
+            width: 1,
+            triangles: {
+              enable: true,
+              color: "#ffffff",
+              opacity: 0.1
+            }
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200
+            }
+          }
         },
-      },
-      particles: {
-        links: {
-          enable: true, // enabling this will make particles linked together
-          distance: 200, // maximum distance for linking the particles
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse"
+            },
+            onclick: {
+              enable: false,
+              mode: "push"
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1
+              }
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 0.8,
+              speed: 0.1
+            },
+            repulse: {
+              distance: 200
+            },
+            push: {
+              particles_nb: 4
+            },
+            remove: {
+              particles_nb: 2
+            }
+          }
         },
-        move: {
-          enable: true, // enabling this will make particles move in the canvas
-          speed: { min: 1, max: 5 }, // using a range in speed value will make particles move in a random speed between min/max values, each particles have its own value, it won't change in time by default
+        retina_detect: true,
+        background: {
+          color: "#4f7ee2",
+          image: "",
+          position: "50% 50%",
+          repeat: "no-repeat",
+          size: "cover"
         },
-        opacity: {
-          value: { min: 0.3, max: 0.7 }, // using a different opacity, to have some semitransparent effects
-        },
-        size: {
-          value: { min: 1, max: 3 }, // let's randomize the particles size a bit
-        },
-      },
-    };
+      };
   }, []);
 
   // useCallback is not mandatory, but it's recommended since this callback can be memoized if static

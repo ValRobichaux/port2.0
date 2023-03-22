@@ -1,17 +1,16 @@
-import { useEffect, useState } from "react";
-import PortfolioList from '../portfolioList/PortfolioList';
-import './Portfolio.scss'
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import PortfolioList from "../portfolioList/PortfolioList";
+import "./Portfolio.scss";
+import { gsap } from "gsap";
 import {
   featuredPortfolio,
   schoolPortfolio,
   personalPortfolio,
 } from "../portfoliodata";
 
-
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
-
 
   const list = [
     { id: "featured", title: "Featured" },
@@ -20,7 +19,6 @@ export default function Portfolio() {
   ];
 
   useEffect(() => {
-
     switch (selected) {
       case "featured":
         setData(featuredPortfolio);
@@ -34,11 +32,10 @@ export default function Portfolio() {
       default:
         setData(featuredPortfolio);
     }
-
-  }, [selected])
+  }, [selected]);
 
   return (
-    <div className='portfolio' id='portfolio'>
+    <div className="portfolio" id="portfolio">
       <h1>Portfolio.</h1>
       <ul>
         {list.map((item) => (
@@ -51,19 +48,21 @@ export default function Portfolio() {
           />
         ))}
       </ul>
-      <div className='container'>
-        {data.map(d => (
-          <a href={d.weblink} key={d.key} target="_blank" rel="noopener noreferrer">
-            <div className='animate pop item'>
-              <img
-                src={d.img}
-                alt="" 
-                />
+      <div className="container">
+        {data.map((d) => (
+          <a
+            href={d.weblink}
+            key={d.key}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="animate pop item">
+              <img src={d.img} alt="" />
               <h3>{d.title}</h3>
             </div>
           </a>
         ))}
       </div>
     </div>
-  )
+  );
 }

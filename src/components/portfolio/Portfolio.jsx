@@ -2,11 +2,14 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./Portfolio.scss";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   featuredPortfolio,
   schoolPortfolio,
   personalPortfolio,
 } from "../portfoliodata";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
@@ -34,8 +37,30 @@ export default function Portfolio() {
     }
   }, [selected]);
 
+  const portfolioRef = useRef(null);
+  const portfolioItems = useRef([]);
+
+  useLayoutEffect(() => {
+    const items = portfolioItems.current;
+    if (items.length > 0) {
+      gsap.set(items, { opacity: 0, y: "100%" });
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: portfolioRef.current,
+          start: "top center+=100",
+        },
+      }).to(items, {
+        opacity: 1,
+        y: "0%",
+        duration: 0.5,
+        stagger: 0.2,
+        ease: "power2.out",
+      });
+    }
+  }, [data]);
+
   return (
-    <div className="portfolio" id="portfolio">
+    <div className="portfolio" id="portfolio" ref={portfolioRef}>
       <h1>Portfolio.</h1>
       <ul>
         {list.map((item) => (
@@ -49,12 +74,13 @@ export default function Portfolio() {
         ))}
       </ul>
       <div className="container">
-        {data.map((d) => (
+        {data.map((d, index) => (
           <a
             href={d.weblink}
             key={d.key}
             target="_blank"
             rel="noopener noreferrer"
+            ref={(el) => (portfolioItems.current[index] = el)}
           >
             <div className="animate pop item">
               <img src={d.img} alt="" />

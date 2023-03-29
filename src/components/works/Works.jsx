@@ -4,6 +4,11 @@ import { useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+import {Swiper, SwiperSlide} from 'swiper/react';
+import { Pagination, Navigation } from "swiper";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,7 +49,30 @@ export default function Works() {
 
   return (
     <div className="works" id="works" ref={worksRef}>
-      <div
+    <div className="responsive-container">
+      <div className="row">
+        <Swiper
+          spaceBetween={500}
+          slidesPerView={1}
+          centeredSlides={true}
+          loop={true}
+          navigation={true}
+          modules={[Navigation]}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper)=> console.log(swiper)}
+          >
+            <SwiperSlide>Slide 1</SwiperSlide>
+            <SwiperSlide>Slide 2</SwiperSlide>
+            <SwiperSlide>Slide 3</SwiperSlide>
+        </Swiper>
+
+      </div>
+    </div>
+     
+     
+     
+     
+      {/* <div
         className="slider"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
@@ -89,6 +117,8 @@ export default function Works() {
         alt=""
         onClick={() => handleClick("right")}
       ></img>
+    
+    </div> */}
     </div>
   );
 }

@@ -111,19 +111,19 @@ export default function Works() {
                       <img src="assets/blogicon.png" alt=""></img>
                     </div>
                     <h1>Blogging</h1>
-                    <span className="description">
-                      "My dev blog is something that has really inspired me to
+                    <span className="blogdesc description">
+                      My dev blog is something that has really inspired me to
                       build things in public and showcase the type of work that
                       I have been doing. It's something that has really helped
                       me embrace the reality of being a programmer and something
                       that I love doing. I was always so interested in reading
                       updates and patch notes for my favorite games, so this was
-                      something that I really wanted to start in my off time.",
+                      something that I really wanted to start in my off time.
                     </span>
                   </div>
                   <div className="right col">
                     <a href="https://github.com/ValRobichaux/devBlog">
-                      <img className="blog" src="assets/blogmain.png" alt=""></img>
+                      <img className="blogimg" src="assets/blogmain.png" alt=""></img>
                     </a>
                   </div>
                 </div>

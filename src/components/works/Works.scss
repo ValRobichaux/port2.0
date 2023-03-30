@@ -75,6 +75,10 @@
   }
 
   @include mobile {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
     .responsive-container {
       text-align: -webkit-center;
       .row {
@@ -103,7 +107,7 @@
                 text-align: left;
                 width: 100%;
                 .imagewrapper {
-                  text-align-last:center;
+                  text-align-last: center;
                   img {
                     margin-top: 0rem;
                     width: 50%;
@@ -113,8 +117,8 @@
                   font-size: 5rem;
                   color: $mainColor;
                 }
-                .blog-title{
-                  font-size:4rem;
+                .blog-title {
+                  font-size: 4rem;
                 }
                 .ml-title {
                   font-size: 4rem;
@@ -133,7 +137,7 @@
               .right {
                 align-self: center;
                 width: 100%;
-                .machinelearning{
+                .machinelearning {
                   width: 60%;
                 }
                 img {

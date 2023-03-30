@@ -9,6 +9,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+var arrowPrev = document.querySelector('.swiper-button-prev');
+var arrowNext = document.querySelector('.swiper-button-prev');
+
+if (MediaQueryList.l < 4) {
+    arrowPrev.style.display = 'none';
+    arrowNext.style.display = 'none';
+}
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Works() {

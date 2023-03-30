@@ -1,11 +1,10 @@
 import "./Works.scss";
-import { workData } from "../worksdata";
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -13,16 +12,6 @@ import "swiper/css/navigation";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Works() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const handleClick = (direction) => {
-    direction === "left"
-      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
-      : setCurrentSlide(
-          currentSlide < workData.length - 1 ? currentSlide + 1 : 0
-        );
-  };
-
   const worksRef = useRef(null);
   const worksItems = useRef([]);
 
@@ -65,7 +54,7 @@ export default function Works() {
             <SwiperSlide>
               <div className="responsive-container">
                 <div className="row">
-                  <div className="col">
+                  <div className="left col">
                     <div className="imagewrapper">
                       <img src="assets/unityicon.png" alt=""></img>
                     </div>
@@ -80,7 +69,7 @@ export default function Works() {
                       rendering and help on some indie game projects
                     </span>
                   </div>
-                  <div className="col">
+                  <div className="right col">
                     <a href="https://unity.com">
                       <img src="assets/unitylogo.png" alt=""></img>
                     </a>
@@ -88,8 +77,58 @@ export default function Works() {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
+            <SwiperSlide>
+              <div className="responsive-container">
+                <div className="row">
+                  <div className="left col">
+                    <div className="imagewrapper">
+                      <img src="assets/unityicon.png" alt=""></img>
+                    </div>
+                    <h1>Unity</h1>
+                    <span className="description">
+                      Unity is something that excited me for a very long time, I
+                      really like the approach that the developers have used to
+                      create an extremely versatile engine that can support
+                      2D,3D, VR and AR games. Unity also comes along with
+                      absolutely buttery graphics and an extremely great
+                      community. I definitely would like looking into 3D model
+                      rendering and help on some indie game projects
+                    </span>
+                  </div>
+                  <div className="right col">
+                    <a href="https://unity.com">
+                      <img src="assets/unitylogo.png" alt=""></img>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="responsive-container">
+                <div className="row">
+                  <div className="left col">
+                    <div className="imagewrapper">
+                      <img src="assets/unityicon.png" alt=""></img>
+                    </div>
+                    <h1>Unity</h1>
+                    <span className="description">
+                      Unity is something that excited me for a very long time, I
+                      really like the approach that the developers have used to
+                      create an extremely versatile engine that can support
+                      2D,3D, VR and AR games. Unity also comes along with
+                      absolutely buttery graphics and an extremely great
+                      community. I definitely would like looking into 3D model
+                      rendering and help on some indie game projects
+                    </span>
+                  </div>
+                  <div className="right col">
+                    <a href="https://unity.com">
+                      <img src="assets/unitylogo.png" alt=""></img>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>

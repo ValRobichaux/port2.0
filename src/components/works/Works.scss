@@ -10,7 +10,6 @@
 
   .responsive-container{
     text-align: -webkit-center;
-    height: 100%;
     .row{
       width: 80%;
       .swiper{
@@ -55,6 +54,9 @@
               img{
                 transform: rotate(30deg);
                 width: 120%;
+              }
+              .blog{
+                width: 100%;
               }
             }  
           }

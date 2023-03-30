@@ -122,26 +122,27 @@
         }
         .right {
           display: flex;
+          justify-content: center;
           text-align: center;
-          width: 100%;
           .typer {
             padding-right: 2rem;
           }
           .wrapper {
             align-items: center;
             height: 50%;
+            padding:0;
             h1 {
-              font-size: 50px;
+              font-size: 65px;
               margin: 10px 0;
               color: white;
             }
 
             h2 {
-              font-size: 35px;
+              font-size: 70px;
             }
 
             h3 {
-              font-size: 30px;
+              font-size: 50px;
             }
           }
 

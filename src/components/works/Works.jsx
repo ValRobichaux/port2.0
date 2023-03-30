@@ -4,11 +4,11 @@ import { useLayoutEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
-import {Swiper, SwiperSlide} from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,29 +49,51 @@ export default function Works() {
 
   return (
     <div className="works" id="works" ref={worksRef}>
-    <div className="responsive-container">
-      <div className="row">
-        <Swiper
-          spaceBetween={500}
-          slidesPerView={1}
-          centeredSlides={true}
-          loop={true}
-          navigation={true}
-          modules={[Navigation]}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper)=> console.log(swiper)}
+      <div className="responsive-container">
+        <div className="row">
+          <Swiper
+            spaceBetween={500}
+            slidesPerView={1}
+            speed={1000}
+            centeredSlides={true}
+            loop={true}
+            navigation={true}
+            modules={[Navigation]}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
           >
-            <SwiperSlide>Slide 1</SwiperSlide>
+            <SwiperSlide>
+              <div className="responsive-container">
+                <div className="row">
+                  <div className="col">
+                    <div className="imagewrapper">
+                      <img src="assets/unityicon.png" alt=""></img>
+                    </div>
+                    <h1>Unity</h1>
+                    <span className="description">
+                      Unity is something that excited me for a very long time, I
+                      really like the approach that the developers have used to
+                      create an extremely versatile engine that can support
+                      2D,3D, VR and AR games. Unity also comes along with
+                      absolutely buttery graphics and an extremely great
+                      community. I definitely would like looking into 3D model
+                      rendering and help on some indie game projects
+                    </span>
+                  </div>
+                  <div className="col">
+                    <a href="https://unity.com">
+                      <img src="assets/unitylogo.png" alt=""></img>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
             <SwiperSlide>Slide 2</SwiperSlide>
             <SwiperSlide>Slide 3</SwiperSlide>
-        </Swiper>
-
+          </Swiper>
+        </div>
       </div>
-    </div>
-     
-     
-     
-     
+
       {/* <div
         className="slider"
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}

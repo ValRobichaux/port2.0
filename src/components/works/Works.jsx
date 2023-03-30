@@ -52,7 +52,7 @@ export default function Works() {
             onSwiper={(swiper) => console.log(swiper)}
           >
             <SwiperSlide>
-              <div className="responsive-container">
+              <div className="unity responsive-container">
                 <div className="row">
                   <div className="left col">
                     <div className="imagewrapper">
@@ -78,21 +78,21 @@ export default function Works() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="responsive-container">
+              <div className="ml responsive-container">
                 <div className="row">
                   <div className="left col">
                     <div className="imagewrapper">
-                      <img src="assets/MLicon.png" alt=""></img>
+                      <img className="ml" src="assets/MLicon.png" alt=""></img>
                     </div>
-                    <h1>Machine Learning</h1>
-                    <span className="description">
-                      "I personally think that Machine learning is going to
+                    <h1 className="ml-title">Machine Learning</h1>
+                    <span className="mldesc description">
+                      I personally think that Machine learning is going to
                       change the world some day. Machine learning combines
                       statistics, data mining, and computer learning and meshes
                       them into a unique way to observe and manipulate data.
                       Data is only getting bigger as the world grows and being
                       able to come up with intelligent decisions based on data
-                      will help improve quality of life for everyone. ",
+                      will help improve quality of life for everyone.
                     </span>
                   </div>
                   <div className="right col">
@@ -104,7 +104,7 @@ export default function Works() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="responsive-container">
+              <div className="blog responsive-container">
                 <div className="row">
                   <div className="left col">
                     <div className="imagewrapper">

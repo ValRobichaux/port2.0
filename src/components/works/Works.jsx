@@ -85,7 +85,7 @@ export default function Works() {
                       <img className="ml" src="assets/MLicon.png" alt=""></img>
                     </div>
                     <h1 className="ml-title">Machine Learning</h1>
-                    <span className="mldesc description">
+                    <span className="mldesc">
                       I personally think that Machine learning is going to
                       change the world some day. Machine learning combines
                       statistics, data mining, and computer learning and meshes
@@ -110,7 +110,7 @@ export default function Works() {
                     <div className="imagewrapper">
                       <img src="assets/blogicon.png" alt=""></img>
                     </div>
-                    <h1>Blogging</h1>
+                    <h1 className="blog-title">Blogging</h1>
                     <span className="blogdesc description">
                       My dev blog is something that has really inspired me to
                       build things in public and showcase the type of work that

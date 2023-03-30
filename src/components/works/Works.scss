@@ -28,29 +28,29 @@
           justify-content: center;
           align-items: center;
           border-radius: 12px;
-          
+
           .row {
             gap: 0;
             .left {
               text-align: left;
               .imagewrapper {
                 img {
-                  margin-top: 2rem;
                   width: 10%;
+                  padding-top: 3rem;
                 }
               }
               h1 {
                 font-size: 9rem;
                 color: $mainColor;
               }
-              .ml-title{
+              .ml-title {
                 font: size 7rem;
               }
-              .mldesc{
-                font-size:2.5rem !important;
+              .mldesc {
+                font-size: 2.5rem;
+                line-height: normal;
               }
-              .blogdesc{
-
+              .blogdesc {
               }
               .description {
                 font-size: 3rem;
@@ -63,9 +63,9 @@
                 transform: rotate(30deg);
                 width: 120%;
               }
-              .blogimg{
+              .blogimg {
                 width: 90%;
-                transform:rotate(0deg);
+                transform: rotate(0deg);
               }
             }
           }
@@ -73,194 +73,78 @@
       }
     }
   }
-  .arrow {
-    height: 75px;
-    position: absolute;
-    margin: 7rem;
 
-    &.left {
-      left: 240px;
-      top: 240rem;
-      transform: rotateY(180deg);
-      transform: rotate(90deg);
-
-      &:hover {
-        animation: bounceLeft 2s infinite;
-      }
-    }
-
-    &.right {
-      right: 240px;
-      top: 240rem;
-      transform: rotateY(-180deg);
-      transform: rotate(-90deg);
-
-      &:hover {
-        animation: bounceRight 2s infinite;
-      }
-    }
-  }
-
-  .slider {
-    display: flex;
-    transition: all 1s ease-out;
-    gap: 28%;
-    margin-left: 200rem;
+  @include mobile {
     .responsive-container {
-      width: 100vw;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
+      text-align: -webkit-center;
       .row {
-        .item {
-          width: 1400px;
-          height: 66vh;
-          background-color: white;
-          border-radius: 10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          overflow: hidden;
+        width: 80%;
+        flex-direction: column;
+        .swiper {
+          width: 100%;
+          height: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 12px;
           box-shadow: 20px 20px rgba(0, 0, 0, 0.267);
 
-          .left {
-            flex: 4;
+          .swiper-slide {
+            background-color: white;
+            text-align: center;
+            height: 1000px;
             display: flex;
-            align-items: center;
             justify-content: center;
-
-            .leftContainer {
-              width: 90%;
-              height: 70%;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-
-              .imgContainer {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                background-color: $mainColor;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              }
-              img {
-                width: 66px;
-                height: 100px;
-                object-fit: contain;
-              }
-              h2 {
-                height: 420px;
-                font-size: 50px;
-                font-weight: 600;
-              }
-              p {
-                font-size: 30px;
-                color: rgb(122, 118, 118);
-              }
-            }
-          }
-
-          .right {
-            flex: 5;
-            height: 100%;
-            display: flex;
             align-items: center;
-            justify-content: center;
-            overflow: hidden;
+            border-radius: 12px;
 
-            img {
-              width: 400px;
-              transform: rotate(10deg);
-              height: auto;
-              width: auto;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@keyframes bounceLeft {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateX(0) rotate(90deg) rotateY(180deg);
-  }
-  40% {
-    transform: translateX(30px) rotate(90deg) rotateY(180deg);
-  }
-  60% {
-    transform: translateX(15px) rotate(90deg) rotateY(180deg);
-  }
-}
-
-@keyframes bounceRight {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateX(0) rotate(-90deg) rotateY(-180deg);
-  }
-  40% {
-    transform: translateX(-30px) rotate(-90deg) rotateY(-180deg);
-  }
-  60% {
-    transform: translateX(-15px) rotate(-90deg) rotateY(-180deg);
-  }
-}
-@include mobile {
-  .works {
-    background-color: $mainColor;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    flex-direction: column;
-
-    .arrow {
-      display: none;
-    }
-
-    .slider {
-      gap: 0%;
-      margin-left: 0;
-      flex-direction: column;
-      .responsive-container {
-        .row {
-          .item {
-            width: 100%;
-            margin-bottom: 2rem;
-            height: 27vh;
-            .left {
-              height: 130%;
-              .leftContainer {
-                .imgContainer {
-                  width: 20px;
-                  height: 20px;
+            .row {
+              gap: 0;
+              .left {
+                text-align: left;
+                width: 100%;
+                .imagewrapper {
+                  text-align-last:center;
+                  img {
+                    margin-top: 0rem;
+                    width: 50%;
+                  }
+                }
+                h1 {
+                  font-size: 5rem;
+                  color: $mainColor;
+                }
+                .blog-title{
+                  font-size:4rem;
+                }
+                .ml-title {
+                  font-size: 4rem;
+                }
+                .mldesc {
+                  font-size: 20px;
+                }
+                .blogdesc {
+                }
+                .description {
+                  font-size: 20px;
+                  line-height: normal;
+                  text-align: center;
+                }
+              }
+              .right {
+                align-self: center;
+                width: 100%;
+                .machinelearning{
+                  width: 60%;
                 }
                 img {
-                  width: 33px;
-                  height: 50px;
+                  transform: rotate(0deg);
+                  width: 100%;
+                  padding-top: 3rem;
                 }
-                h2 {
-                  font-size: 24px;
-                  margin-top: 0.5rem;
+                .blogimg {
+                  width: 70%;
+                  transform: rotate(0deg);
                 }
-                p {
-                  font-size: 12px;
-                }
-              }
-            }
-
-            .right {
-              img {
-                width: 100%;
               }
             }
           }

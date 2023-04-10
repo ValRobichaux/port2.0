@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import InputField from "../inputField/InputField";
 import TextField from "../textField/TextField";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 export default function Contact() {
   const [message, setMessage] = useState(false);
@@ -93,6 +95,8 @@ export default function Contact() {
                   name="message"
                   label="Your message here"
                 />
+                <ReCAPTCHA
+                sitekey={process.env.REACT_APP_SITE_KEY}/>
                 <button type="submit" className="submitButton">
                   Send
                   <ArrowForwardIosIcon className="arrowIcon" />

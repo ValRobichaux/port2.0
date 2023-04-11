@@ -95,8 +95,8 @@ export default function Contact() {
                   name="message"
                   label="Your message here"
                 />
-                <ReCAPTCHA
-                sitekey={process.env.REACT_APP_SITE_KEY}/>
+                {/* <ReCAPTCHA
+                sitekey={process.env.REACT_APP_SITE_KEY}/> */}
                 <button type="submit" className="submitButton">
                   Send
                   <ArrowForwardIosIcon className="arrowIcon" />

@@ -68,13 +68,13 @@ export default function Works() {
                     </div>
                     <h1>Unity</h1>
                     <span className="description">
-                      Unity is something that excited me for a very long time, I
-                      really like the approach that the developers have used to
+                      Unity is something that excited me for a very long time. I
+                      really enjoy studying the approach that the developers take to
                       create an extremely versatile engine that can support
-                      2D,3D, VR and AR games. Unity also comes along with
+                      2D,3D, VR and AR games. Unity also comes packaged with
                       absolutely buttery graphics and an extremely great
-                      community. I definitely would like looking into 3D model
-                      rendering and help on some indie game projects
+                      community. I also dabble into 3D model
+                      rendering and occasionaly help on some indie game projects.
                     </span>
                   </div>
                   <div className="right col">
@@ -94,7 +94,7 @@ export default function Works() {
                     </div>
                     <h1 className="ml-title">Machine Learning</h1>
                     <span className="mldesc">
-                      I personally think that Machine learning is going to
+                      I would argue that Machine learning is going to
                       change the world some day. Machine learning combines
                       statistics, data mining, and computer learning and meshes
                       them into a unique way to observe and manipulate data.

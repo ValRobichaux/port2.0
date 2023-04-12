@@ -97,7 +97,7 @@
   @include mobile {
     flex-direction: column;
     align-items: center;
-    padding: 0px 0px 100% 0px;
+    padding: 0px 0px 60% 0px;
     width: 100%;
     .responsive-container {
       .row {
@@ -116,7 +116,9 @@
             border-radius: 10%;
             img {
               height: 50%;
-              width: 100vw;
+              width: 85vw;
+              background-color: currentColor;
+              border-radius: 100px;
             }
           }
         }
@@ -130,7 +132,7 @@
           .wrapper {
             align-items: center;
             height: 50%;
-            padding:0;
+            padding: 0;
             h1 {
               font-size: 65px;
               margin: 10px 0;

@@ -103,8 +103,9 @@
     }
   }
   @include mobile {
+    display: none;
     .wrapper {
-        padding: 1.5rem;
+      padding: 1.5rem;
       a {
       }
 
@@ -113,7 +114,7 @@
         }
 
         .itemContainer {
-            display:none;
+          display: none;
           .icon {
           }
 

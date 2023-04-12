@@ -95,7 +95,7 @@
           .swiper-slide {
             background-color: white;
             text-align: center;
-            height: 1000px;
+            height: 90vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -111,6 +111,7 @@
                   img {
                     margin-top: 0rem;
                     width: 50%;
+                    padding-top: 1rem;
                   }
                 }
                 h1 {
@@ -124,12 +125,12 @@
                   font-size: 4rem;
                 }
                 .mldesc {
-                  font-size: 20px;
+                  font-size: 18px;
                 }
                 .blogdesc {
                 }
                 .description {
-                  font-size: 20px;
+                  font-size: 18px;
                   line-height: normal;
                   text-align: center;
                 }
@@ -143,7 +144,7 @@
                 img {
                   transform: rotate(0deg);
                   width: 100%;
-                  padding-top: 3rem;
+                  padding-top: 0rem;
                 }
                 .blogimg {
                   width: 70%;
